@@ -1,3 +1,9 @@
+# a file of all the functions
+def start(): 
+    userName = input("What is your name?: ")
+    print(f"Welcome {userName}!")
+    print("How this game works:\n1) It asks you for the name of your team and the total number of games your team will play this season\n2) it asks for the name of the opponents for each game.\n3) The game will then randomly generate the scores for each of those games\n4) It will display the scores generated for those games along with the home and opposing team names\n5) It displays a win-loss record and tells you how your team did! (needs improvement, qualified for NCAA tournament, etc.)")
+    
 def selectTeams(listTeams = None):
 
     # display menu with all team names
@@ -32,7 +38,6 @@ def selectTeams(listTeams = None):
     return [sHomeTeam, sOpponentTeam]
 
 
-
 def displayMenu():
     exitloop = False
     while exitloop == False:
@@ -45,3 +50,4 @@ def displayMenu():
         except:
             print("\nInvalid input.  Please enter a number from the menu.")        
     return iMenuChoice
+
