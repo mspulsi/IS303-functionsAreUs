@@ -8,12 +8,7 @@ import random
 from functions import *
 
 # intialize necessary variables to store user input
-dGameRecord = {}
-start()
 
-sTeamName = str(input("Enter the home team's name: "))
-iGameCount = int(input("Enter how many games the team will play for the season: "))
-print("\n")
 
 # based on the input for how many games in the season, iterate through the following 
 # to create a game score and opposing team for each game.
@@ -69,6 +64,8 @@ from functions import selectTeams
 
 # print welcome message (we should include something about the Big 12 because that's where I got the teams from)
 # first function goes here
+dGameRecord = {}
+start()
 
 # set list of teams
 listTeams = ["Arizona State", "Arizona", "BYU", "Baylor", "Cincinnati", "Colorado", "Houston", "Iowa State", "Kansas", "Kansas State", "Oklahoma State", "TCU", "Texas Tech", "UCF", "Utah", "West Virginia"]
