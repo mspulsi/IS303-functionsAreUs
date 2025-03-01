@@ -1,11 +1,12 @@
 # a file of all the functions
+import random
+
 def start(): 
     userName = input("What is your name?: ")
-    print(f"Welcome {userName} to our soccer game simulation!")
-    print("\n")
-    print("How the game works:\n"
-          "You'll choose a home team and opponents to play from a list of teams we provide that are in the Big 12.\nOur code will simulate a soccer season and will report your game record.\nFollow the prompts to play!")
-    print("\n")
+    print(f"Welcome {userName} to our soccer game simulation!\n")
+    print("How the game works:\n")
+    print("You'll choose a home team and opponents to play from a list of teams we provide that are in the Big 12.\nOur code will simulate a soccer season and will report your game record.\nFollow the prompts to play!\n")
+    
     
 def selectTeams(listTeams = None):
 
@@ -54,3 +55,20 @@ def displayMenu():
             print("\nInvalid input.  Please enter a number from the menu.")        
     return iMenuChoice
 
+def getGameScore(teamNames):
+    iOppScore = random.randint(0,5)
+    iHomeScore = random.randint(0,5)
+    
+    #checking to make sure the scores do not equal to prevent a tie
+    while iHomeScore == iOppScore :
+        iHomeScore = random.randint(0,5)
+        iOppScore = random.randint(0,5)
+
+    # with the random scores determine whether the home team won or lost
+    sWinLose = ""
+    if iHomeScore > iOppScore :
+        sWinLose = "win"
+    else :
+        sWinLose = "loss"
+    # return the scores and whether it is a win or loss
+    return [iHomeScore, iOppScore, sWinLose]

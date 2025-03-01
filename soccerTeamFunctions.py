@@ -67,7 +67,7 @@ start()
 
 # print welcome message (we should include something about the Big 12 because that's where I got the teams from)
 # first function goes here
-
+iMenuChoice = displayMenu()
 # set list of teams
 listTeams = ["Arizona State", "Arizona", "BYU", "Baylor", "Cincinnati", "Colorado", "Houston", "Iowa State", "Kansas", "Kansas State", "Oklahoma State", "TCU", "Texas Tech", "UCF", "Utah", "West Virginia"]
 
