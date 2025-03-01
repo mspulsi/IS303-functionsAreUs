@@ -5,11 +5,14 @@
 # and outputing the team's record with an accompanying evaluation of the record. 
 
 import random
+from functions import *
 
 # intialize necessary variables to store user input
 dGameRecord = {}
-sTeamName = input("Enter the Home Team's name: ")
-iGameCount = int(input("Enter how many games for the season: "))
+start()
+
+sTeamName = str(input("Enter the home team's name: "))
+iGameCount = int(input("Enter how many games the team will play for the season: "))
 print("\n")
 
 # based on the input for how many games in the season, iterate through the following 
