@@ -3,9 +3,9 @@ def start():
     userName = input("What is your name?: ")
     print(f"Welcome {userName} to our soccer game simulation!")
     print("\n")
-    print("How the game works:\n"
-          "You'll choose a home team and opponents to play from a list of teams we provide that are in the Big 12.\nOur code will simulate a soccer season and will report your game record.\nFollow the prompts to play!")
+    print("How the game works:\nYou'll choose a home team and opponents to play from a list of teams we provide that are in the Big 12.\nOur code will simulate a soccer season and will report your game record.\nFollow the prompts to play!")
     print("\n")
+    return userName
     
 def selectTeams(listTeams = None):
 
