@@ -6,7 +6,8 @@ def start():
     print(f"Welcome {userName} to our soccer game simulation!\n")
     print("How the game works:\n")
     print("You'll choose a home team and opponents to play from a list of teams we provide that are in the Big 12.\nOur code will simulate a soccer season and will report your game record.\nFollow the prompts to play!\n")
-    
+    return userName
+
     
 def selectTeams(listTeams = None):
 
