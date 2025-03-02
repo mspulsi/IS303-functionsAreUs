@@ -53,10 +53,17 @@ def selectTeams(homeTeam = None):
             print(f"{str(iCount+1)}. {listTeams[iCount]}")
 
         # receive home team selection
-        iHomeTeamSelection = int(input("\nEnter the number of the home team: "))
-        sTeamSelection = listTeams[(iHomeTeamSelection - 1)]
-        print(f"\n{sTeamSelection} is the home team\n")
-        return sTeamSelection
+        bContinue = False
+        while bContinue == False:
+            try:
+                iHomeTeamSelection = int(input("\nEnter the number of the home team: "))
+                sTeamSelection = listTeams[(iHomeTeamSelection - 1)]
+                print(f"\n{sTeamSelection} is the home team\n")
+                bContinue = True
+                return sTeamSelection
+            except (IndexError, ValueError):
+                print("\nInvalid choice. Please enter a number from the menu.")
+
     else:
         listTeams.remove(homeTeam)
         # display menu with all other team names except the home team
@@ -64,10 +71,16 @@ def selectTeams(homeTeam = None):
             print(f"{str(iCount+1)}. {listTeams[iCount]}")
 
         # get opposing team selection
-        iOppTeamSelection = int(input("\nEnter the number of the opposing team: "))
-        sTeamSelection = listTeams[(iOppTeamSelection - 1)]
-        print(f"\n{sTeamSelection} is the away team\n")
-        return sTeamSelection
+        bContinue = False
+        while bContinue == False:
+            try:
+                iOppTeamSelection = int(input("\nEnter the number of the opposing team: "))
+                sTeamSelection = listTeams[(iOppTeamSelection - 1)]
+                print(f"\n{sTeamSelection} is the away team\n")
+                bContinue = True
+                return sTeamSelection
+            except (IndexError, ValueError):
+                print("\nInvalid choice. Please enter a number from the menu.")
     
 def printRecord(sTeamName, dTeamRecord):
     # print out all of the games with their corresponding opposing team and scores
